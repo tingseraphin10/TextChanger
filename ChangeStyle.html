@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML w/Elements</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-size: 20px;
+        }
+        .container {
+            text-align: center;
+        }
+        .button {
+            background-color: #0a7285;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+            <p id="text">This is a Text</p>
+            <button onclick="toggleStyle()" style="background-color: #0a7285; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">Click Me</button>
+    </div>
+
+    <script>
+        function toggleStyle() {
+            var textElement = document.getElementById("text");
+            if (textElement.style.color === "blue") {
+                textElement.style.color = "green";
+                textElement.style.fontSize = "20px";
+                textElement.style.fontWeight = "normal";
+            } else {
+                textElement.style.color = "blue";
+                textElement.style.fontSize = "25px";
+                textElement.style.fontWeight = "bold";
+            }
+        }
+    </script>
+
+</body>
+</html>
